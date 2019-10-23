@@ -1,6 +1,5 @@
-# Pentesting 1
-
-## 1. Key Terms
+## Important Terms and References
+### Terms
 
 - **Black-Box Penetration**: Testers are expected to attack the target as an outsider with no previous knowledge of the environment.
     > **Example**: Here testers are paid to learn as much as they can about the environment and it's vulnerabilities, from an outside perspective.
@@ -24,16 +23,12 @@
 - **Black-Box Penetration**: Definition
   > **Example**: Example usage here
 
-## 2. Key Terms
-
 - **ShellShock**: A bash exploit that allows an attacker to execute Bash commands with HTTP requests.
 
 - **Common Gateway Interface (CGI)**: There are many ways to serve websites. One is called **CGI (Common Gateway Interface)**,  which defines a **standard**, or set of rules, that allows clients to run scripts on a server.
   > **Example**: A bug in CGI is what allows the ShellShock exploit to work.
 
 - **BurpSuite**: A software suite that specializes in web vulnerability exploitation.
-
-## 3. Key Terms
 
 - **MSFconsole** is used for the reconnaissance, vulnerability analysis, and exploitation phases of a penetration test.
   > **Example**: MSFConsole uses 4 different types of modules:
@@ -49,17 +44,11 @@
 - **Meterpreter** is a post-exploitation tool used to interact with compromised targets. Metasploit loads this automatically if an exploit is successful.
 
 
-
-#Pentesting 2
-
-# Important Terms and References
 ## References
 
   - [Official NMap Tutorial](https://nmap.org/book/port-scanning.html)
   - [Metasploit Databases](https://www.offensive-security.com/metasploit-unleashed/using-databases/)
   - [Hydra Github](https://github.com/vanhauser-thc/thc-hydra)
-
-## Key Terms
 
 - **Host Discovery**: The process of discovering live hosts on a network.
   > **Example**: One way to do this is ping every IP address in the, subnet and see which ones respond. This is important because it enables attackers to identify potential targets.
@@ -97,3 +86,40 @@
   > **Example**: In addition to the information above, attackers will look for client-specific data, such as financial records; business documents; confidental communications; etc.
 
 - **Pivot**. Pentesters often manage to compromise machines that have multiple network interfaces. Each network interface attached to a machine allows it to communicate with a different subnet. This means that compromising a machine with multiple network interfaces might allow attackers to _pivot_ into completely new networks. This sometimes results in their compromising machines on sensitive internal networks that were assumed to be safe, which can have disastrous consequences: Exfiltration of employee PII, confidential financial records, executive correspondences, etc.
+
+
+- **Pivot**: Pivoting is act of routing data _through_ a _pivot point_ in order to communicate with a target network.
+  >**Example**: You can pivot to machines on subnets by **routing** through a host that _does_ have an interface, such as a router.
+
+- **DMZ**: The `Demilitarized Zone` is a network that sits in-between the internet and the internal network of an organization. All interenet traffic must pass through the `DMZ` before being routed into the network.
+  >**Example**: While DMZs add an extra layer of protection to a network, they are not impenetrable. Attackers can still exploit machines on the internal network by compromising a machine in the DMZ and using _it_ to send traffic to the intranet.
+
+- **System privileges** are typically called **root privileges** on Linux.
+  > **Example**: A **system shell**, or **root shell**, is one that runs with system privileges.
+
+- **User Privileges**: Applications like Firefox and MS Word run with user privileges.
+  > **Example**: By default, users only have privileges to modify files they own. They cannot make changes to other users' environments.
+
+- **Administrator**: Administrators can modify anyone's files and application configurations, and have full privileges to reconfigure the system.
+  > **Example**: Typically, gaining administrator privileges to a system is one of the first things an attacker tries to do.
+
+- **Escalate Privileges**: This is the act of gaining administrator privledges on a compromised target.
+  > **Example**: Once a system has been breached, an attacker attempts to escalate privileges so they have full control over the system.
+
+- **SYSTEM**: When the WIndows OS runs a service that needs elevated privileges, it will run with `SYSTEM` privileges.
+  > **Example**: `SYSTEM` privileges are identical to Administrator privileges in scope, but `SYSTEM` privileges are used only by the operating system, _not_ by user accounts.
+
+- **Named Pipe**: "Pipes" in Windows are conceptually similar to those in Linux: They are simply a stream of data. Programs can use pipes to send data back and forth.
+  >**Example**: A "named pipe" allows a running process to pass data to another. The process sending data is called a **pipe server**, and the recipient is called a **pipe client**.
+
+- **Named Pipe Impersonation**: This is a Windows feature that enables a pipe _client_ to run commands with the same privileges as the pipe _server_.
+  >**Example**: "Named pipes" allow a process to run with elevated privileges. If the pipe server has administrative privileges, _this means that a pipe client with user privileges can use named pipe impersonation to run commands with administrative privileges_.
+
+- **Tokens** are pieces of data that systems use to authenticate users. On Windows, **Kerberos** is the most common token authentication protocol.
+  >**Example**: When a user logs in, they are issued a unique token. They then pass this token along with future requests to prove their identity.
+
+- **Token Duplication**: Metasploit is able to duplicate and re-use existing user tokens, allowing you to impersonate other authenticated users.
+  > **Example**: Token duplication allows access to systems by using tokens that have been generated by other users.
+
+- **NetBIOS**: A particular network transport that is part of the LAN Manager protocol suite. NetBIOS uses a broadcast communication style that was applicable to early segmented local area networks.
+  >**Example**: A protocol family including name resolution, datagram, and connection services.
