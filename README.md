@@ -1,3 +1,5 @@
+![Awesome Creative Portfolio Websites](bg.png)
+
 ## Important Terms and References
 ### Terms
 
