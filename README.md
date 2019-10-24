@@ -1,4 +1,4 @@
-![Gaelyems](welcome.jpg)
+![Gaelyems](59088.gif)
 
 ## Important Terms and References
 ### Terms
