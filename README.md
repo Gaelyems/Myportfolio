@@ -1,4 +1,4 @@
-![Gaelyems](my-portfolio-1-638.jpg)
+![Gaelyems](welcome.jpg)
 
 ## Important Terms and References
 ### Terms
