@@ -1,4 +1,4 @@
-![Gaelyems](933555.gif) (Technology-and-Digital2.png)
+![Gaelyems](933555.gif)
 
 ## Important Terms and References
 ### Terms
