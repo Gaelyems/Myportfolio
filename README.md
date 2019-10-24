@@ -1,4 +1,4 @@
-![Awesome Creative Portfolio Websites](my-portfolio-1-638.jpg)
+![Gaelyems](my-portfolio-1-638.jpg)
 
 ## Important Terms and References
 ### Terms
